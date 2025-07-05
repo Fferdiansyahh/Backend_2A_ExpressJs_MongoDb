@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 // Fungsi untuk mengirim email verifikasi
 const sendVerificationEmail = async (userEmail, verificationToken) => {
     // Pastikan BASE_URL Anda di .env sesuai dengan alamat server Anda (contoh: http://localhost:3000)
-    const verificationLink = `${process.env.BASE_URL}/users/verify-email/${verificationToken}`;
+    const verificationLink = `${process.env.BASE_URL}/verify-email/${verificationToken}`;
 
     const mailOptions = {
         from: process.env.EMAIL_FROM, // Email pengirim (bisa nama + email)

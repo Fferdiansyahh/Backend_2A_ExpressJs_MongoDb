@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use("/course", courseRoute);
-app.use("/users", userRoute);
+app.use("/", userRoute);
 app.use("/upload", uploadRoute);
 app.get("/", (req, res) => {
   res.send("Hello Ferdian, your server running");z
